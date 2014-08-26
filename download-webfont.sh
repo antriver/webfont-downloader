@@ -50,7 +50,7 @@
 
 # Declare the array families from the input instead of defining here
 # Split the given comma separated string
-IFS=';' read -ra families <<< "$1"
+IFS=',' read -ra families <<< "$1"
 
 #declare -a families
 #families+=('PT Sans:400')
