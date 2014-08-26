@@ -29,7 +29,7 @@ $dir = __DIR__;
 mkdir($md5);
 chdir($md5);
 
-$cmd = "{$dir}/download-webfont.sh {$parsedString}";
+$cmd = "{$dir}/download-webfont.sh '{$parsedString}'";
 
 echo "\n$cmd\n";
 passthru($cmd);

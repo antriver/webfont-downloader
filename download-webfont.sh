@@ -48,15 +48,19 @@
 # will be created and overwritten if it exists.
 #=======================================================================================================================
 
-declare -a families
-families+=('PT Sans:400')
-families+=('PT Sans:700')
-families+=('PT Sans:400italic')
-families+=('PT Sans:700italic')
-families+=('PT Serif:400')
-families+=('PT Serif:700')
-families+=('PT Serif:400italic')
-families+=('PT Serif:700italic')
+# Declare the array families from the input instead of defining here
+# Split the given comma separated string
+IFS=';' read -ra families <<< "$1"
+
+#declare -a families
+#families+=('PT Sans:400')
+#families+=('PT Sans:700')
+#families+=('PT Sans:400italic')
+#families+=('PT Sans:700italic')
+#families+=('PT Serif:400')
+#families+=('PT Serif:700')
+#families+=('PT Serif:400italic')
+#families+=('PT Serif:700italic')
 
 # Adjust this is you want the created file to have a different name. Note that this file will be overwritten!
 css="font.css"
